@@ -29,7 +29,8 @@ import com.android.settings.applications.ApplicationFeatureProvider;
 import com.android.settings.applications.ApplicationFeatureProviderImpl;
 import com.android.settings.bluetooth.BluetoothFeatureProvider;
 import com.android.settings.bluetooth.BluetoothFeatureProviderImpl;
-import com.android.settings.connecteddevice.dock.DockUpdaterFeatureProviderImpl;
+// import com.android.settings.connecteddevice.dock.DockUpdaterFeatureProviderImpl;
+import com.google.android.settings.connecteddevice.dock.DockUpdaterFeatureProviderGoogleImpl;
 import com.android.settings.dashboard.DashboardFeatureProvider;
 import com.android.settings.dashboard.DashboardFeatureProviderImpl;
 import com.android.settings.dashboard.suggestions.SuggestionFeatureProvider;
@@ -112,7 +113,7 @@ public class FeatureFactoryImpl extends FeatureFactory {
     @Override
     public DockUpdaterFeatureProvider getDockUpdaterFeatureProvider() {
         if (mDockUpdaterFeatureProvider == null) {
-            mDockUpdaterFeatureProvider = new DockUpdaterFeatureProviderImpl();
+            mDockUpdaterFeatureProvider = new DockUpdaterFeatureProviderGoogleImpl();
         }
         return mDockUpdaterFeatureProvider;
     }
